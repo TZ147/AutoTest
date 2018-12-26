@@ -22,6 +22,7 @@ import java.util.List;
 /**
  * Created by yuchen on 2018/12/11
  */
+@SuppressWarnings("unchecked")
 public class GetUserInfoTest {
 
     @Test(dependsOnGroups = "loginTrue",description = "获取userId为1的用户信息")
@@ -35,7 +36,7 @@ public class GetUserInfoTest {
 
         User user = session.selectOne(getUserInfoCase.getExpected(), getUserInfoCase);
 
-        List<User> userList = new ArrayList();
+        List<User> userList = new ArrayList<User>();
         userList.add(user);
         JSONArray jsonArray = new JSONArray(userList);
         JSONArray jsonArray1 = new JSONArray(resultJson.getString(0));
