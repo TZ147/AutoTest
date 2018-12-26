@@ -35,7 +35,7 @@ public class GetUserInfoTest {
 
         User user = session.selectOne(getUserInfoCase.getExpected(), getUserInfoCase);
 
-        List userList = new ArrayList();
+        List<User> userList = new ArrayList();
         userList.add(user);
         JSONArray jsonArray = new JSONArray(userList);
         JSONArray jsonArray1 = new JSONArray(resultJson.getString(0));
@@ -56,7 +56,7 @@ public class GetUserInfoTest {
         HttpResponse response = TestConfig.defaultHttpClient.execute(post);
 
         result = EntityUtils.toString(response.getEntity(), "utf-8");
-        List resultList = Arrays.asList(result);
+        List<String> resultList = Arrays.asList(result);
         JSONArray array = new JSONArray(resultList);
         return array;
     }
