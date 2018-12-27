@@ -5,7 +5,6 @@ import lombok.Data;
 /**
  * Created by yuchen on 2018/12/11
  */
-@Data
 public class User {
 
     private int id;

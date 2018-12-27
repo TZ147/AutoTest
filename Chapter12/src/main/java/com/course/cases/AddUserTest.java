@@ -33,7 +33,7 @@ public class AddUserTest {
 
         Thread.sleep(3000);
         User user = session.selectOne("addUser",addUserCase);
-        System.out.println(user.toString());
+        //System.out.println(user.toString());
         Assert.assertEquals(addUserCase.getExpected(),result);
     }
 
